@@ -37,7 +37,7 @@
         <div class="col col-8 p-3">
           <div class="card">
             <div class="card-body">
-              <h1 class="card-title text-center">Posts</h1>
+              <h1 class="card-title text-center">My Blogs</h1>
               <div class="d-grid mt-2 text-center g-3">
                 <button type="button" class="btn btn-success w-100" data-bs-toggle="modal"
                   data-bs-target="#CreatePostModal">Post something...</button>
