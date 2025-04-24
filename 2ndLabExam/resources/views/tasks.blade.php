@@ -36,8 +36,10 @@
                   <i class="bi bi-pencil-square"></i> Add Task
                 </button>
               </div>
-              @if (session('success'))
-                <div class="alert alert-success mt-2">{{ session('success') }}</div>
+              @if (session('success') || session('error'))
+                <div class="alert alert-{{ session('success') ? 'success' : 'danger' }} mt-2">
+                  {{ session('success') ? session('success') : session('error') }}
+                </div>
               @endif
 
               @forelse($tasks as $task)
