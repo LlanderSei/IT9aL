@@ -12,7 +12,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return view('tasks', ['tasks' => Task::all()]);
+        return view('tasks', ['tasks' => Task::all('TaskID')]);
     }
 
     /**
@@ -44,7 +44,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        return view('edit', ['task' => Task::first()->where('TaskID', $task->TaskID)]);
     }
 
     /**
